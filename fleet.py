@@ -1,10 +1,19 @@
+from robot import Robot
+
+
 class Fleet:
         
 
-    def __init__(self, robots):
-        self.robots = robots
+    def __init__(self):
+        self.robot = []
         
 
-    def getcreate_fleet(self):
-        return self.create_fleet
+    def create_fleet(self):
 
+        robot1 = Robot('Robocop')
+        robot2 = Robot('Masterblaster')
+        robot3 = Robot('Destroyer')
+        
+        self.robot.append(robot1)
+        self.robot.append(robot2)
+        self.robot.append(robot3)
