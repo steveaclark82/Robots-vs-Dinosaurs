@@ -52,12 +52,13 @@ class Battelfield:
         index = 0
         for dinosaur in self.herd.dinosaur:
             print(f"print {index} for {dinosaur.name} with {dinosaur.health!}")
-    
+            index += 1
     def show_robo_opponent_options(self):
         print("Choose robot")
         index = 0
         for robot in self.fleet.robot:
             print(f"print {index} for {robot.name} with {robot.health!}")
+            index += 1
     
     def diplay_winners(self):
         if len(self.fleet.robot) > len(self.herd.dinosaur):
