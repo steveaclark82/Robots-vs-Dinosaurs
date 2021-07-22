@@ -6,10 +6,10 @@ class Robot:
     def __init__(self, name):
         self.name = name
         self.health = 100
-        self.weapon = Weapon
+        self.weapon = Weapon()
         
     
     def attack(self, dinosaur):
-        dinosaur.health = dinosaur.health = self.weapon
+        dinosaur.health = dinosaur.health = self.weapon.attack_power
         print("Attack succesful! Robot health now is {dinosaur.health}")
         
