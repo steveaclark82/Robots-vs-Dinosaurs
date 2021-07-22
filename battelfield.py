@@ -8,7 +8,9 @@ class Battelfield:
     
     def __init__(self, fleet, herd):
         self.fleet = Fleet()
+        self.fleet.create_fleet()
         self.herd = Herd()
+        self.herd.create_herd()
         
     
     def run_game(self):
