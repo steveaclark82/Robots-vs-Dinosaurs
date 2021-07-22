@@ -10,6 +10,6 @@ class Robot:
         
     
     def attack(self, dinosaur):
-        dinosaur.health = dinosaur.health = self.attack_power
+        dinosaur.health = dinosaur.health = self.weapon
         print("Attack succesful! Robot health now is {dinosaur.health}")
         
