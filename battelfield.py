@@ -38,10 +38,10 @@ class Battelfield:
     
     def robo_turn(self):
         self.show_robo_opponent_options()
-        robot_choice = int(input("Which robot will attack"))
+        robo_choice = int(input("Which robot will attack"))
         self.show_dino_opponent_options()
         dino_choice = int(input("Which dinosaur will defend"))
-        self.fleet.robot[robot_choice].attack(
+        self.fleet.robot[robo_choice].attack(
             self.herd.dinosaur[dino_choice])
         if self.herd.dinosaur[dino_choice].health <= 0:
             self.herd.dinosaur.remove(self.dinosaur[dino_choice])
@@ -51,13 +51,13 @@ class Battelfield:
         print("Choose dinosaur")
         index = 0
         for dinosaur in self.herd.dinosaur:
-            print("print {index} for {dinosaur.name} with {dinosaur.health!}")
+            print(f"print {index} for {dinosaur.name} with {dinosaur.health!}")
     
     def show_robo_opponent_options(self):
         print("Choose robot")
         index = 0
-        for robot in self.fleet.robots:
-            print("print {index} for {robot.name} with {robot.health!}")
+        for robot in self.fleet.robot:
+            print(f"print {index} for {robot.name} with {robot.health!}")
     
     def diplay_winners(self):
         if len(self.fleet.robot) > len(self.herd.dinosaur):
