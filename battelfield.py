@@ -28,7 +28,7 @@ class Battelfield:
     
     def dino_turn(self):
         self.show_dino_opponent_options()
-        dinosaur_choice = int(input("Which dinosaur will attack"))
+        robo_choice = int(input("Which dinosaur will attack"))
         self.show_robo_opponent_options()
         dino_choice = int(input("Which robot will defend"))
         self.fleet.robot[dino_choice].attack(
